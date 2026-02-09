@@ -27,7 +27,7 @@ const NavBar = () => {
   return (
     <div className="navbar bg-base-300">
       <div className="flex-1">
-        <Link to={user ? "/home" : "/login"} className="btn btn-ghost text-xl">
+        <Link to={user ? "/" : "/login"} className="btn btn-ghost text-xl">
           👩‍💻 DevTinder
         </Link>
       </div>
@@ -69,7 +69,9 @@ const NavBar = () => {
               <li>
                 <Link to="/requests">Requests</Link>
               </li>
-
+              <li>
+                <Link to="/premium">Premium</Link>
+              </li>
               <li>
                 <button
                   onClick={handleLogout}
