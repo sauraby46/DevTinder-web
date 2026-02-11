@@ -1,16 +1,62 @@
-# React + Vite
+# DevTinder – Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    DevTinder Frontend is a modern React application that allows developers to:
 
-Currently, two official plugins are available:
+    Register & Login securely
+    Send & Review Connection Requests
+    Chat in real-time using WebSockets
+    Upgrade to Premium Membership
+    View Developer Feed with Pagination
+    Manage Profile & Account Settings
+    Access protected routes using authentication state
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Built using:
 
-## React Compiler
+    React
+    Redux Toolkit
+    Axios
+    WebSocket (Socket.IO Client)
+    Tailwind CSS
+    DaisyUI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Application Flow
 
-## Expanding the ESLint configuration
+    User Signup / Login → JWT stored in HTTP-only cookie (handled by backend)
+    Redux stores authenticated user state
+    Protected routes controlled using global auth state
+    Axios used for API communication
+    WebSocket connection established after login
+    Real-time chat enabled between connected users
+    Premium status verified using backend API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Tech Stack Used
+
+    React (SPA Architecture)
+    Redux Toolkit (Global State Management)
+    Axios (HTTP Client)
+    Socket.IO Client (Real-Time Communication)
+    Tailwind CSS (Utility-first styling)
+    DaisyUI (Prebuilt UI Components)
+
+# State Management(Redux)
+
+    - User authentication state
+    - Premium membership state
+    - Chat messages state
+    - Connection requests state
+    - Feed data state
+
+# API Integration (Axios)
+    
+    - User authentication state
+    - Premium membership state
+    - Chat messages state
+    - Connection requests state
+    - Feed data state
+
+# Authentication Handling
+
+    - On login → user data stored in Redux
+    - Protected routes check auth state
+    - Logout clears Redux state
+    - Premium verification on app load
